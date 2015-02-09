@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6750" systemVersion="14C109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6735"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="RedVsBlue_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" height="151" alignment="left" layout="vertical" id="jsS-1a-Y3g">
+                            <items>
+                                <slider width="1" alignment="left" verticalAlignment="center" value="2" minimum="1" maximum="5" steps="4" id="025-jG-umO">
+                                    <connections>
+                                        <action selector="sliderDidSlide:" destination="AgC-eL-Hgc" id="ILG-0A-hqL"/>
+                                    </connections>
+                                </slider>
+                                <label width="136" height="25" alignment="left" text="Hello World" textAlignment="center" id="viP-rY-HqH"/>
+                                <switch width="1" alignment="left" verticalAlignment="center" value="YES" title="Switch" id="AUj-36-YA2">
+                                    <connections>
+                                        <action selector="switchTapped:" destination="AgC-eL-Hgc" id="NaA-bN-EO3"/>
+                                    </connections>
+                                </switch>
+                                <button width="1" alignment="left" verticalAlignment="bottom" title="Reset" id="yA8-aQ-i8P">
+                                    <connections>
+                                        <action selector="resetButton" destination="AgC-eL-Hgc" id="jk4-Yi-mkF"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="alphaSlider" destination="025-jG-umO" id="o7K-7t-9dn"/>
+                        <outlet property="bgGroup" destination="jsS-1a-Y3g" id="9ti-CP-XKn"/>
+                        <outlet property="coolSwitch" destination="AUj-36-YA2" id="mro-8e-9bq"/>
+                        <outlet property="titleField" destination="viP-rY-HqH" id="had-HB-U8A"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="305" y="431"/>
+        </scene>
+    </scenes>
+</document>
